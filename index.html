@@ -24,7 +24,7 @@
 
         body {
             background-color: #2e2e2e;
-            color: #444444; /* Maroon color */
+            color: #444444;
             font-family: 'Share Tech Mono', monospace;
             overflow: hidden;
             height: 100vh;
@@ -51,6 +51,18 @@
             max-width: 1200px;
             margin: auto;
             padding: 50px 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-section {
+            width: 25%;
+            padding: 20px;
+        }
+
+        .right-section {
+            width: 70%;
+            padding: 20px;
         }
 
         h1 {
@@ -80,10 +92,9 @@
             text-shadow: 0 0 5px #800000;
         }
 
-        /* Tabs */
         .tabs {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             margin-bottom: 20px;
         }
 
@@ -95,7 +106,7 @@
             border: 2px solid #800000;
             border-radius: 5px;
             cursor: pointer;
-            margin: 0 10px;
+            margin: 0 0 10px;
             transition: 0.3s;
         }
 
@@ -110,15 +121,6 @@
             background-color: #800000;
             color: white;
             font-weight: bold;
-        }
-
-        /* Sections */
-        .section {
-            display: none;
-        }
-
-        .section.active {
-            display: block;
         }
 
         .btn-download, .btn-discord {
@@ -212,53 +214,54 @@
 <body>
     <div class="particles"></div>
     <div class="container">
-        <h1>skidderz</h1>
-        
-        <!-- Tabs -->
-        <div class="tabs">
-            <div class="tab active" id="home-tab">Home</div>
-            <div class="tab" id="downloads-tab">Downloads</div>
-            <div class="tab" id="support-tab">Support</div>
-        </div>
-        
-        <!-- Home -->
-        <div class="section active" id="home-section">
-            <p>Welcome to the "greatest" website with "no ratted" executors, we provide the safest experience for our skidderz.</p>
-        </div>
-        
-        <!-- Downloads -->
-        <div class="section" id="downloads-section">
-            <p>Download the latest version of Skidderzz Executor here:</p>
-
-            <div class="download-section">
-                <div class="download-card">
-                    <img src="https://media.discordapp.net/attachments/1227453510149214289/1356835453482831902/Screenshot_2025-04-01_223806_1.png?ex=67ee02fc&is=67ecb17c&hm=509a1f10010c8b4ba1e83b980be9051eb59807866475b063ea78a27eba26afe9&=&format=webp&quality=lossless" alt="Executor Logo 1">
-                    <h3>Solara</h3>
-                    <p>Good UNC, and sUNC. Get's updated weekly.</p>
-                    <a href="https://linkvertise.com/1220497/cloudy-executor" class="btn-download">Download</a>
-                    <a href="https://getcloudy.xyz/" class="btn-website">Website</a>
-                </div>
-                <div class="download-card">
-                    <img src="https://static.wikia.nocookie.net/roblox-executor-list/images/f/fe/Solara.png/revision/latest?cb=20240914124113" alt="Executor Logo 2">
-                    <h3>Solara</h3>
-                    <p>Rarely gets updated but works.</p>
-                    <a href="https://linkvertise.com/1208172/solara-bootstrapper?o=sharing" class="btn-download">Download</a>
-                    <a href="https://getsolara.dev" class="btn-website">Website</a>
-                </div>
-                <div class="download-card">
-                    <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/ad789f5f19f8483da06d1f6a0a8ab9bc" alt="Executor Logo 3">
-                    <h3>Xeno</h3>
-                    <p>Great Executor if it's your first time exploiting.</p>
-                    <a href="https://linkvertise.com/1210123/xeno-v115?o=sharing" class="btn-download">Download</a>
-                    <a href="https://xeno.now" class="btn-website">Website</a>
-                </div>
+        <div class="left-section">
+            <h1>skidderz</h1>
+            <div class="tabs">
+                <div class="tab active" id="home-tab">Home</div>
+                <div class="tab" id="downloads-tab">Downloads</div>
+                <div class="tab" id="support-tab">Support</div>
             </div>
         </div>
         
-        <!-- Support Page -->
-        <div class="section" id="support-section">
-            <p>If you need any help, OR want to submit your executor join our server!</p>
-            <a href="https://discord.gg/DaQmuSzgKG" target="_blank" class="btn-discord"><i class="fab fa-discord"></i> Join Discord</a>
+        <div class="right-section">
+            <!-- Home -->
+            <div class="section active" id="home-section">
+                <p>Welcome to the "greatest" website with "no ratted" executors, we provide the safest experience for our skidderz.</p>
+            </div>
+            
+            <!-- Downloads -->
+            <div class="section" id="downloads-section">
+                <p>Download the latest version of Skidderzz Executor here:</p>
+                <div class="download-section">
+                    <div class="download-card">
+                        <img src="https://media.discordapp.net/attachments/1227453510149214289/1356835453482831902/Screenshot_2025-04-01_223806_1.png?ex=67ee02fc&is=67ecb17c&hm=509a1f10010c8b4ba1e83b980be9051eb59807866475b063ea78a27eba26afe9&=&format=webp&quality=lossless" alt="Executor Logo 1">
+                        <h3>Solara</h3>
+                        <p>Good UNC, and sUNC. Get's updated weekly.</p>
+                        <a href="https://linkvertise.com/1220497/cloudy-executor" class="btn-download">Download</a>
+                        <a href="https://getcloudy.xyz/" class="btn-website">Website</a>
+                    </div>
+                    <div class="download-card">
+                        <img src="https://static.wikia.nocookie.net/roblox-executor-list/images/f/fe/Solara.png/revision/latest?cb=20240914124113" alt="Executor Logo 2">
+                        <h3>Solara</h3>
+                        <p>Rarely gets updated but works.</p>
+                        <a href="https://linkvertise.com/1208172/solara-bootstrapper?o=sharing" class="btn-download">Download</a>
+                        <a href="https://getsolara.dev" class="btn-website">Website</a>
+                    </div>
+                    <div class="download-card">
+                        <img src="https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/ad789f5f19f8483da06d1f6a0a8ab9bc" alt="Executor Logo 3">
+                        <h3>Xeno</h3>
+                        <p>Great Executor if it's your first time exploiting.</p>
+                        <a href="https://linkvertise.com/1210123/xeno-v115?o=sharing" class="btn-download">Download</a>
+                        <a href="https://xeno.now" class="btn-website">Website</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support Page -->
+            <div class="section" id="support-section">
+                <p>If you need any help, OR want to submit your executor join our server!</p>
+                <a href="https://discord.gg/DaQmuSzgKG" target="_blank" class="btn-discord"><i class="fab fa-discord"></i> Join Discord</a>
+            </div>
         </div>
     </div>
 
