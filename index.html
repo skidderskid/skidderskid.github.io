@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skidderz</title>
     <meta property="og:title" content="skidderzz.io">
-    <meta property="og:description" content="The greatest source for 'great' executors, that arent 'ratted'.">
+    <meta property="og:description" content="The greatest source for 'great' executors, that aren't 'ratted'.">
     <meta property="og:image" content="https://media.discordapp.net/attachments/1246719291517308929/1355064651209244773/New_Project.png?ex=67e791cc&is=67e6404c&hm=bbaa7f89cb8384e3208ca15ba5837d3cb24ac98ddaee4946f9997c938a0c0d7e&=&format=webp&quality=lossless">
     <meta property="og:url" content="https://skidderzz.github.io/">
     <meta property="og:type" content="website">
@@ -53,6 +53,7 @@
             padding: 50px 20px;
             display: flex;
             justify-content: space-between;
+            flex-direction: row;
         }
 
         .left-section {
@@ -159,6 +160,12 @@
             border-radius: 10px;
             border: 2px solid #800000;
             text-align: center;
+            transition: 0.4s;
+        }
+
+        .download-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #800000;
         }
 
         .download-card img {
@@ -208,6 +215,14 @@
                 transform: translate(calc(100vw * 2), calc(100vh * 2));
                 opacity: 0;
             }
+        }
+
+        .section {
+            display: none;
+        }
+
+        .section.active {
+            display: block;
         }
     </style>
 </head>
