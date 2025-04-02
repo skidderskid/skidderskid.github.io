@@ -3,43 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skidderzz</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js" defer></script>
+    <title>Roblox Executor Downloads</title>
+    <meta property="og:title" content="Roblox Executor Downloads">
+    <meta property="og:description" content="Download reliable and verified Roblox executors.">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1246719291517308929/1355064651209244773/New_Project.png?ex=67e791cc&is=67e6404c&hm=bbaa7f89cb8384e3208ca15ba5837d3cb24ac98ddaee4946f9997c938a0c0d7e&=&format=webp&quality=lossless">
+    <meta property="og:url" content="https://piracyexecutor.github.io/">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="icon" href="https://media.discordapp.net/attachments/1246719291517308929/1356824680190968080/New_Project_9.png?ex=67edf8f4&is=67eca774&hm=862549686054202fee020d5dc0c126f3126f0b7b65c58e11fac6ac50471e2b2b&=&format=webp&quality=lossless" type="image/png">
+
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <img src="logo.png" alt="Skidderzz Logo" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#downloads">Downloads</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section id="home" class="page">
-            <h1>Skidderzz</h1>
-            <p>The best place to find "great" executors!</p>
+        <h1>Roblox Executor Downloads</h1>
+        <p>Find the best and most reliable executors for Roblox. Download verified and unverified versions below.</p>
+
+        <section class="executor-section">
+            <h2>Verified Executors</h2>
+            <ul>
+                <li><a href="download-link" class="btn-download">Executor 1</a></li>
+                <li><a href="download-link" class="btn-download">Executor 2</a></li>
+            </ul>
         </section>
-        <section id="downloads" class="page">
-            <h2>Downloads</h2>
-            <div class="executor-list">
-                <button class="download-btn" data-url="solara-download.html">Download Solara</button>
-                <button class="download-btn" data-url="krnl-download.html">Download KRNL</button>
-            </div>
+
+        <section class="executor-section">
+            <h2>Unverified Executors</h2>
+            <ul>
+                <li><a href="download-link" class="btn-download">Executor 3</a></li>
+                <li><a href="download-link" class="btn-download">Executor 4</a></li>
+            </ul>
         </section>
+
+        <footer>
+            <p>Powered by Piracy Executor | All Rights Reserved</p>
+        </footer>
     </div>
-    
-    <script>
-        document.querySelectorAll('.download-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                const url = this.getAttribute('data-url');
-                setTimeout(() => {
-                    window.location.href = url;
-                }, 2000); //delay
-            });
-        });
-    </script>
 </body>
 </html>
