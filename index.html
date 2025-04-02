@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skidderzz Executor</title>
-    <meta property="og:title" content="Skidderzz Executor">
-    <meta property="og:description" content="The ultimate executor for Roblox, fast, reliable, and secure.">
+    <meta property="og:title" content="skidderzz.io">
+    <meta property="og:description" content="The greatest source for 'great' executors, that arent 'ratted'.">
     <meta property="og:image" content="https://media.discordapp.net/attachments/1246719291517308929/1355064651209244773/New_Project.png?ex=67e791cc&is=67e6404c&hm=bbaa7f89cb8384e3208ca15ba5837d3cb24ac98ddaee4946f9997c938a0c0d7e&=&format=webp&quality=lossless">
     <meta property="og:url" content="https://skidderzz.github.io/">
     <meta property="og:type" content="website">
@@ -24,7 +24,7 @@
 
         body {
             background-color: #2e2e2e;
-            color: #800000; /* Maroon color */
+            color: #444444; /* Maroon color */
             font-family: 'Share Tech Mono', monospace;
             overflow: hidden;
             height: 100vh;
@@ -70,16 +70,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        .ascii {
-            white-space: pre;
-            font-size: 16px;
-            color: #800000;
-            text-shadow: 0 0 15px #800000;
-            opacity: 0;
-            animation: fadeIn 2s ease-out forwards;
-            user-select: none;
         }
 
         p {
@@ -154,15 +144,27 @@
             box-shadow: 0 0 20px #800000;
         }
 
-        footer {
-            margin-top: 50px;
+        .download-section {
+            margin-top: 30px;
+        }
+
+        .download-card {
+            background-color: #333;
             padding: 20px;
-            font-size: 14px;
-            color: #888;
-            border-top: 1px solid #800000;
-            box-shadow: 0 -1px 15px #800000;
-            text-align: center;
-            user-select: none;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 2px solid #800000;
+        }
+
+        .download-card h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .download-card p {
+            color: #ccc;
+            margin-bottom: 15px;
         }
 
         .particles {
@@ -209,32 +211,38 @@
             <div class="tab" id="support-tab">Support</div>
         </div>
         
-        <!-- Home Page -->
+        <!-- Home -->
         <div class="section active" id="home-section">
             <p>Welcome to the greatest place to find good executors for Roblox. Fast, reliable, and secure!</p>
-            <a href="about:blank" class="btn-download">DOWNLOAD NOW</a>
-            <a href="https://discord.gg/DaQmuSzgKG" target="_blank" class="btn-discord"><i class="fab fa-discord"></i> Join Discord</a>
         </div>
         
-        <!-- Downloads Page -->
+        <!-- Downloads -->
         <div class="section" id="downloads-section">
-            <p>Download the latest version of Skidderzz Executor here.</p>
-            <a href="about:blank" class="btn-download">DOWNLOAD NOW</a>
+            <p>Download the latest version of Skidderzz Executor here:</p>
+
+            <div class="download-section">
+                <div class="download-card">
+                    <h3>Skidderzz Executor v1.0</h3>
+                    <p>The first and most stable release. Fast and reliable for all your needs.</p>
+                    <a href="about:blank" class="btn-download">Download Now</a>
+                </div>
+                <div class="download-card">
+                    <h3>Skidderzz Executor v2.0 (Beta)</h3>
+                    <p>Experience the beta with new features and optimizations. Not as stable as v1.0.</p>
+                    <a href="about:blank" class="btn-download">Download Beta</a>
+                </div>
+            </div>
         </div>
         
         <!-- Support Page -->
         <div class="section" id="support-section">
-            <p>If you need any help, contact us through Discord or support channels.</p>
+            <p>If you need any help, OR want to submit your executor join our server!</p>
             <a href="https://discord.gg/DaQmuSzgKG" target="_blank" class="btn-discord"><i class="fab fa-discord"></i> Join Discord</a>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2025 Skidderzz. All Rights Reserved.</p>
-    </footer>
-
     <script>
-        // Tab navigation
+        // Tab
         const tabs = document.querySelectorAll('.tab');
         const sections = document.querySelectorAll('.section');
 
@@ -248,7 +256,6 @@
             });
         });
 
-        // Particle effect
         const particlesContainer = document.querySelector('.particles');
         setInterval(() => {
             const particle = document.createElement('div');
