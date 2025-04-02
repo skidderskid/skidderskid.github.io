@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skidderzz</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="logo.png" alt="Skidderzz Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#downloads">Downloads</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="home" class="page">
+            <h1>Skidderzz</h1>
+            <p>The best place to find "great" executors!</p>
+        </section>
+        <section id="downloads" class="page">
+            <h2>Downloads</h2>
+            <div class="executor-list">
+                <button class="download-btn" data-url="solara-download.html">Download Solara</button>
+                <button class="download-btn" data-url="krnl-download.html">Download KRNL</button>
+            </div>
+        </section>
+    </div>
+    
+    <script>
+        document.querySelectorAll('.download-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const url = this.getAttribute('data-url');
+                setTimeout(() => {
+                    window.location.href = url;
+                }, 2000); //delay
+            });
+        });
+    </script>
+</body>
+</html>
