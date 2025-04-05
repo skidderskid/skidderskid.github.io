@@ -23,8 +23,8 @@
         }
 
         body {
-            background-color: #f0f0f0;
-            color: #2e2e2e;
+            background-color: #800000;
+            color: #800000;
             font-family: 'Share Tech Mono', monospace;
             height: 100vh;
             display: flex;
@@ -32,8 +32,6 @@
             align-items: center;
             text-align: center;
             position: relative;
-            overflow: hidden;
-            font-size: 18px;
         }
 
         body::before {
@@ -111,8 +109,8 @@
         .tab {
             padding: 15px 30px;
             font-size: 20px;
-            color: #ccc;
-            background-color: #444;
+            color: #800000;
+            background-color: transparent;
             border: 2px solid #800000;
             border-radius: 5px;
             cursor: pointer;
@@ -133,7 +131,7 @@
             font-weight: bold;
         }
 
-        .btn-download, .btn-discord {
+        .btn-discord {
             display: inline-block;
             padding: 20px 60px;
             margin-top: 25px;
@@ -149,7 +147,7 @@
             letter-spacing: 2px;
         }
 
-        .btn-download:hover, .btn-discord:hover {
+        .btn-discord:hover {
             background-color: #800000;
             color: #333;
             transform: scale(1.1);
@@ -244,9 +242,8 @@
             <h1>skidderz</h1>
             <div class="tabs">
                 <div class="tab active" id="home-tab">Home</div>
-                <div class="tab" id="downloads-tab">Download</div>
+                <div class="tab" id="support-tab">Support</div>
             </div>
-            <a href="https://cdn.discordapp.com/attachments/.../NovaExecutor.exe" class="btn-download">Download Executor</a>
         </div>
         
         <div class="right-section">
