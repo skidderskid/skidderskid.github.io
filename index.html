@@ -3,45 +3,292 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skidderzz Executor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <title>skidderz</title>
+    <meta property="og:title" content="skidderzz.io">
+    <meta property="og:description" content="The 'greatest' executor!">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1246719291517308929/1355064651209244773/New_Project.png?ex=67e791cc&is=67e6404c&hm=bbaa7f89cb8384e3208ca15ba5837d3cb24ac98ddaee4946f9997c938a0c0d7e&=&format=webp&quality=lossless">
+    <meta property="og:url" content="https://skidderzz.github.io/">
+    <meta property="og:type" content="website">
+
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="icon" href="https://media.discordapp.net/attachments/1246719291517308929/1355064651209244773/New_Project.png?ex=67e791cc&is=67e6404c&hm=bbaa7f89cb8384e3208ca15ba5837d3cb24ac98ddaee4946f9997c938a0c0d7e&=&format=webp&quality=lossless" type="image/png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #444444;
+            color: #2e2e2e;
+            font-family: 'Share Tech Mono', monospace;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-size: 18px;
+        }
+
+        body::before {
+            content: "ANNOUNCEMENT: hi :3";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .container {
+            z-index: 2;
+            width: 100%;
+            max-width: 1200px;
+            padding: 50px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .left-section {
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+        .right-section {
+            width: 100%;
+            max-width: 900px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 7rem;
+            margin: 0;
+            text-shadow: 0 0 15px #800000;
+            animation: fadeIn 2s ease-out;
+            user-select: none;
+            text-align: center;
+            letter-spacing: 5px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        p {
+            font-size: 20px;
+            margin: 20px 0;
+            opacity: 0.85;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px #800000;
+            text-align: center;
+        }
+
+        .tabs {
+            display: flex;
+            margin-bottom: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .tab {
+            padding: 15px 30px;
+            font-size: 20px;
+            color: #ccc;
+            background-color: #444;
+            border: 2px solid #800000;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        .tab:hover {
+            background-color: #800000;
+            color: white;
+            transform: scale(1.05);
+            box-shadow: 0 0 10px #800000;
+        }
+
+        .tab.active {
+            background-color: #800000;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-download, .btn-discord {
+            display: inline-block;
+            padding: 20px 60px;
+            margin-top: 25px;
+            font-size: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 10px;
+            background-color: #333;
+            color: #800000;
+            border: 2px solid #800000;
+            transition: 0.4s;
+            margin-right: 15px;
+            letter-spacing: 2px;
+        }
+
+        .btn-download:hover, .btn-discord:hover {
+            background-color: #800000;
+            color: #333;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #800000;
+        }
+
+        .download-section {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .download-card {
+            background-color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            border: 2px solid #800000;
+            text-align: center;
+            transition: 0.4s;
+        }
+
+        .download-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px #800000;
+        }
+
+        .download-card img {
+            max-width: 100%;
+            max-height: 150px;
+            border-radius: 10px;
+            border: 2px solid #800000;
+        }
+
+        .download-card h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .download-card p {
+            color: #ccc;
+            margin-bottom: 15px;
+        }
+
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particles div {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background-color: #800000;
+            border-radius: 50%;
+            opacity: 0.9;
+            animation: particle-move 5s infinite;
+        }
+
+        @keyframes particle-move {
+            0% {
+                transform: translate(0, 0);
+                opacity: 0.9;
+            }
+            100% {
+                transform: translate(calc(100vw * 2), calc(100vh * 2));
+                opacity: 0;
+            }
+        }
+
+        .section {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .section.active {
+            display: block;
+            opacity: 1;
+        }
+    </style>
 </head>
 <body>
+    <div class="particles"></div>
     <div class="container">
-        <header>
-            <div class="logo">Skidderzz Executor</div>
-        </header>
-
-        <section class="intro">
-            <h1>Welcome to Skidderzz Executor</h1>
-            <p>Experience smooth and powerful Roblox exploits with Skidderzz.</p>
-            <div class="buttons">
-                <a href="#download" class="btn-primary">Download Now</a>
-                <a href="#features" class="btn-secondary">Explore Features</a>
+        <div class="middle-section">
+            <h1>skidderz</h1>
+            <div class="tabs">
+                <div class="tab active" id="home-tab">Home</div>
+                <div class="tab" id="downloads-tab">Download</div>
             </div>
-        </section>
-
-        <section id="download" class="section">
-            <h2>Download Skidderzz Executor</h2>
-            <a href="https://cdn.discordapp.com/attachments/.../NovaExecutor.exe" class="btn-primary">Download Now</a>
-        </section>
-
-        <section id="features" class="section">
-            <h2>Features</h2>
-            <ul>
-                <li>Fast and efficient</li>
-                <li>Easy-to-use interface</li>
-                <li>Secure and safe</li>
-                <li>Customizable settings</li>
-            </ul>
-        </section>
-
-        <footer>
-            <div class="social-links">
-                <a href="https://discord.gg/jnUWGpbSfJr" target="_blank">Discord</a>
+        </div>
+        
+        <div class="right-section">
+            <!-- Home -->
+            <div class="section active" id="home-section">
+                <p>upcoming roblox executor</p>
             </div>
-        </footer>
+            
+
+            <!-- Support Page -->
+            <div class="section" id="support-section">
+                <p>join our server for more info</p>
+                <a href="https://discord.gg/jnUWGpbSfJ" target="_blank" class="btn-discord"><i class="fab fa-discord"></i> Join Discord</a>
+            </div>
+        </div>
     </div>
+
+    <script>
+        // Tab
+        const tabs = document.querySelectorAll('.tab');
+        const sections = document.querySelectorAll('.section');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                
+                sections.forEach(section => section.classList.remove('active'));
+                document.getElementById(tab.id.replace('-tab', '-section')).classList.add('active');
+            });
+        });
+
+        const particlesContainer = document.querySelector('.particles');
+        setInterval(() => {
+            const particle = document.createElement('div');
+            particle.style.top = `${Math.random() * 100}%`;
+            particle.style.left = `${Math.random() * 100}%`;
+            particlesContainer.appendChild(particle);
+
+            setTimeout(() => {
+                particle.remove();
+            }, 5000);
+        }, 25);
+    </script>
 </body>
 </html>
